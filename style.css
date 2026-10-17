@@ -535,7 +535,7 @@ select {
   color: var(--arc-text-secondary);
 }
 
-/* Right Column: Organic Curved Architectural Frame with hero-tech.jpg */
+/* Right Column: Transparent Floating 3D Tech Illustration */
 .arc-hero-visual {
   display: flex;
   justify-content: flex-end;
@@ -546,62 +546,43 @@ select {
 .arc-hero-frame {
   width: 100%;
   max-width: 660px;
-  height: 490px;
-  border-radius: var(--radius-hero);
-  overflow: hidden;
   position: relative;
-  background: #FFFFFF;
-  box-shadow:
-    0 30px 75px -15px rgba(22, 21, 19, 0.12),
-    0 15px 35px -10px rgba(255, 106, 26, 0.12),
-    0 0 0 1px rgba(212, 163, 115, 0.35);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .arc-hero-frame:hover {
   transform: translateY(-4px);
-  box-shadow:
-    0 40px 90px -15px rgba(22, 21, 19, 0.18),
-    0 20px 45px -10px rgba(255, 106, 26, 0.18),
-    0 0 0 1px rgba(212, 163, 115, 0.55);
 }
 
 .arc-hero-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
   display: block;
-  filter: contrast(1.02) saturate(1.04);
+  mix-blend-mode: multiply;
+  filter: contrast(1.07) brightness(1.02);
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .arc-hero-frame:hover .arc-hero-img {
-  transform: scale(1.03);
-}
-
-/* Ambient Blend Overlay to harmonize image with site's warm palette */
-.arc-hero-blend-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(255, 106, 26, 0.08) 0%, transparent 50%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, transparent 40%, rgba(22, 21, 19, 0.08) 100%);
-  pointer-events: none;
+  transform: scale(1.02);
 }
 
 /* Floating Glass Badge (matching Arcora reference aesthetic) */
 .arc-floating-pill {
   position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  background: rgba(255, 255, 255, 0.92);
+  bottom: 1rem;
+  left: 0.5rem;
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.85);
@@ -610,14 +591,14 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  box-shadow: 0 16px 36px rgba(22, 21, 19, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 36px rgba(22, 21, 19, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: var(--transition);
   z-index: 3;
 }
 
 .arc-floating-pill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 45px rgba(22, 21, 19, 0.16);
+  box-shadow: 0 20px 42px rgba(22, 21, 19, 0.14);
 }
 
 .arc-floating-thumb {
@@ -1645,7 +1626,11 @@ select {
 
   .arc-hero-frame {
     max-width: 100%;
-    height: 420px;
+    height: auto;
+  }
+
+  .arc-hero-img {
+    max-height: 440px;
   }
 
   .arc-services-header {
@@ -1744,9 +1729,12 @@ select {
 
   .arc-hero-frame {
     max-width: 100%;
-    height: 300px;
-    border-radius: var(--radius-card);
+    height: auto;
     margin-top: 1.25rem;
+  }
+
+  .arc-hero-img {
+    max-height: 320px;
   }
 
   .arc-floating-pill {
