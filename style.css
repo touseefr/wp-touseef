@@ -382,10 +382,66 @@ select {
    4. SECTION 1: HERO SECTION
    -------------------------------------------------------------------------- */
 .arc-hero-section {
-  padding: 9.5rem 0 5rem;
-  background: var(--arc-bg-light);
+  padding: 9.5rem 0 5.5rem;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(226, 177, 119, 0.28) 0%, transparent 45%),
+    radial-gradient(circle at 10% 80%, rgba(212, 163, 115, 0.22) 0%, transparent 50%),
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.95) 0%, transparent 70%),
+    linear-gradient(165deg, #FBF8F3 0%, #F5EFE6 45%, #ECE3D4 100%);
   position: relative;
   overflow: hidden;
+}
+
+/* Ambient Floating Glow Mesh in Hero */
+.arc-hero-glow-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.65;
+  animation: orbFloat 10s ease-in-out infinite alternate;
+}
+
+.hero-glow-orb.orb-1 {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(235, 185, 128, 0.35) 0%, rgba(212, 163, 115, 0.05) 70%, transparent 100%);
+  top: -80px;
+  right: 5%;
+}
+
+.hero-glow-orb.orb-2 {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(210, 160, 110, 0.25) 0%, rgba(246, 235, 220, 0.1) 70%, transparent 100%);
+  bottom: 0;
+  left: -50px;
+  animation-delay: -5s;
+}
+
+.hero-glow-orb.orb-3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
+  top: 40%;
+  left: 35%;
+  animation-delay: -3s;
+}
+
+@keyframes orbFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, -20px) scale(1.08); }
+  100% { transform: translate(-20px, 15px) scale(0.95); }
 }
 
 .arc-hero-container {
@@ -393,6 +449,8 @@ select {
   grid-template-columns: 1.1fr 1.35fr;
   gap: 3.5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* Left Column */
@@ -408,6 +466,14 @@ select {
   letter-spacing: -0.035em;
   color: var(--arc-text-primary);
   margin-bottom: 1.25rem;
+}
+
+.arc-gradient-text {
+  background: linear-gradient(135deg, #161513 15%, #9E7444 65%, #D4A373 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
 }
 
 .arc-hero-desc {
@@ -477,13 +543,23 @@ select {
 .arc-hero-frame {
   width: 100%;
   max-width: 680px;
-  height: 480px;
+  height: 490px;
   border-radius: var(--radius-hero);
   overflow: hidden;
   position: relative;
-  box-shadow: var(--arc-shadow-lg);
-  border: 1px solid var(--arc-border-light);
-  background: var(--arc-bg-card-light);
+  box-shadow: 0 30px 70px -15px rgba(22, 21, 19, 0.15), 0 0 0 1px rgba(212, 163, 115, 0.35);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5EFE6 100%);
+}
+
+.arc-hero-frame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 40%, rgba(22, 21, 19, 0.18) 100%);
+  pointer-events: none;
 }
 
 .arc-hero-img {
