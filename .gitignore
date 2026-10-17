@@ -20,3 +20,6 @@ yarn-error.log*
 
 # Node temp
 node_modules/
+
+# Backups
+bkup/

@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Touseef Raza | Senior WordPress Architect &amp; Headless Full-Stack Engineer</title>
+  <title>Touseef Raza | Senior WordPress Architect &amp; Headless Full-Stack Developer</title>
   <meta name="description"
-    content="Senior WordPress Architect & Full-Stack Engineer. Specialized in bespoke zero-bloat WordPress architectures, decoupled Headless React, high-volume WooCommerce, and 95+ Core Web Vitals optimization.">
+    content="Senior WordPress Architect & Full-Stack PHP Developer with 5+ years experience building custom themes, headless React/Next.js systems, AI integrations, WooCommerce, and 90+ Core Web Vitals optimization.">
   <meta name="keywords"
-    content="WordPress Architect, Senior WordPress Developer, Headless WordPress, Next.js, WooCommerce, REST API, PHP 8, Core Web Vitals, Touseef Raza">
+    content="WordPress Developer, Senior WordPress Developer, Headless WordPress, React, REST API, AI Integrations, WooCommerce, Gutenberg Blocks, PHP 8, PageSpeed Optimization, Touseef Raza">
   <meta name="author" content="Touseef Raza">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Touseef Raza | Senior WordPress Architect &amp; Full-Stack Engineer">
+  <meta property="og:title" content="Touseef Raza | Senior WordPress Architect &amp; Full-Stack Developer">
   <meta property="og:description"
-    content="Bespoke zero-bloat WordPress architectures, Headless React systems, and 95+ Core Web Vitals optimization.">
+    content="5+ Years engineering bespoke, zero-bloat WordPress architectures, Headless React systems, AI integrations, and 90+ Core Web Vitals.">
 
-  <!-- Google Fonts: Plus Jakarta Sans for ultra-clean luxury architectural typography -->
+  <!-- Google Fonts: Plus Jakarta Sans & Inter for clean agency typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -29,37 +29,55 @@
 
 <body>
 
-  <!-- FLOATING LUXURY HEADER / NAVBAR -->
-  <header class="arc-header" id="mainHeader">
-    <div class="container arc-header-inner">
+  <!-- Top Announcement Bar -->
+  <!-- <div class="top-announcement-bar">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <span class="status-pulse"></span>
+        <span>Available for Q4 Enterprise Projects, Headless Migrations &amp; Senior Contracts</span>
+      </div>
+      <div class="announcement-right">
+        <a href="#contact" class="announcement-cta">Book a 15-Min Strategy Call &rarr;</a>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Primary Header / Navbar -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-container">
       <!-- Brand Logo -->
-      <a href="#hero" class="arc-brand" aria-label="Touseef Raza Homepage">
-        <span class="arc-brand-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+      <a href="#" class="brand-logo" aria-label="Touseef Raza Homepage">
+        <div class="logo-mark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-            <polyline points="9 22 9 12 15 12 15 22" />
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
           </svg>
-        </span>
-        <span class="arc-brand-text">TOUSEEF</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">TOUSEEF RAZA</span>
+          <span class="brand-sub">Senior WP Architect</span>
+        </div>
       </a>
 
-      <!-- Centered Pill Navigation Menu -->
-      <nav class="arc-nav-pill" id="navMenuWrapper">
-        <ul class="arc-nav-list">
-          <li><a href="#hero" class="arc-nav-link active">Home</a></li>
-          <li><a href="#services" class="arc-nav-link">Services</a></li>
-          <li><a href="#projects" class="arc-nav-link">Projects</a></li>
-          <li><a href="#about" class="arc-nav-link">About</a></li>
-          <li><a href="#headless" class="arc-nav-link">Playground</a></li>
+      <!-- Navigation Menu -->
+      <nav class="nav-menu-wrapper" id="navMenuWrapper">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#headless" class="nav-link">Headless &amp; AI</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Right Action CTA -->
-      <div class="arc-header-action">
-        <a href="#contact" class="arc-btn-dark arc-btn-sm">
+      <!-- Header Action -->
+      <div class="header-action-group">
+        <a href="#contact" class="btn btn-pill-orange">
           <span>Get in Touch</span>
-          <span class="arc-btn-arrow">&rarr;</span>
+          <span class="btn-arrow">&rarr;</span>
         </a>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
           <span></span>
@@ -71,68 +89,99 @@
   </header>
 
   <main>
-    <!-- SECTION 1: HERO SECTION -->
-    <section class="arc-hero-section" id="hero">
-      <!-- Ambient Luxury Gradient Glow Mesh -->
-      <div class="arc-hero-glow-mesh" aria-hidden="true">
-        <div class="hero-glow-orb orb-1"></div>
-        <div class="hero-glow-orb orb-2"></div>
-        <div class="hero-glow-orb orb-3"></div>
-      </div>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <!-- Subtle Decorative Background Shape -->
+      <div class="hero-bg-accent" aria-hidden="true"></div>
 
-      <div class="container arc-hero-container">
+      <div class="container hero-container">
 
-        <!-- Left Column: Copy & Actions -->
-        <div class="arc-hero-copy">
-          <div class="arc-kicker">ARCHITECTURE &bull; HEADLESS &bull; WOOCOMMERCE</div>
-          <h1 class="arc-hero-headline">
-            Platforms<br>That Feel<br><span class="arc-gradient-text">Human.</span>
+        <!-- Left: Hero Headline & Action -->
+        <div class="hero-copy">
+          <h1 class="hero-headline">
+            We Build <span class="text-orange">Digital Solutions</span> That Scale.
           </h1>
-          <p class="arc-hero-desc">
-            We design modern digital spaces and high-concurrency web platforms that blend beauty, speed, and everyday function. 5+ years architecting bespoke, zero-bloat WordPress systems.
+
+          <p class="hero-description">
+            I help businesses, fast-growing startups, and global enterprises engineer powerful, zero-bloat
+            <strong>WordPress architectures</strong>, decoupled <strong>Headless React</strong> systems, and intelligent
+            <strong>AI integrations</strong> that drive measurable growth.
           </p>
 
-          <div class="arc-hero-actions">
-            <a href="#projects" class="arc-btn-dark arc-btn-lg">
-              <span>Explore Our Work</span>
-              <span class="arc-btn-arrow">&rarr;</span>
+          <div class="hero-actions-row">
+            <a href="#work" class="btn btn-pill-orange btn-lg">
+              <span>Explore Selected Work</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="https://wa.me/923204436508" target="_blank" rel="noopener noreferrer"
+              class="btn btn-pill-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>WhatsApp Chat</span>
             </a>
           </div>
 
-          <!-- Social Proof: Avatars + Happy Clients -->
-          <div class="arc-social-proof">
-            <div class="arc-avatar-group">
-              <span class="arc-avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80');"></span>
-              <span class="arc-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80');"></span>
-              <span class="arc-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80');"></span>
+          <!-- 3 Feature Highlights Under Hero (Matching Reference Image) -->
+          <div class="hero-highlights-grid">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Web Development</h4>
+                <p>Modern &amp; scalable bespoke themes (OOP PHP)</p>
+              </div>
             </div>
-            <div class="arc-proof-text">
-              <strong>500+</strong>
-              <span>Happy Clients &amp; Deployments</span>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                  <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Headless &amp; React</h4>
+                <p>High-performance Next.js &amp; WP REST APIs</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+                  <path d="M12 12L2.1 7.1" />
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <h4>AI &amp; Workflows</h4>
+                <p>OpenAI GPT-4o, automated schema &amp; search</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Organic Curved Architectural Frame with hero-tech.jpg -->
-        <div class="arc-hero-visual">
-          <div class="arc-hero-frame">
-            <img src="hero-tech.jpg" alt="Senior WordPress &amp; Full-Stack Platform Engineering" class="arc-hero-img">
+        <!-- Right: 3D Tech Device Showcase (Matching Cambased Mockup) -->
+        <div class="hero-visual-column">
+          <div class="hero-mockup-frame">
+            <img src="hero-tech.jpg" alt="Modern 3D Web Engineering Architecture" class="hero-mockup-img" width="600"
+              height="450">
 
-            <!-- Floating Glass Badge (matching Arcora reference aesthetic) -->
-            <div class="arc-floating-pill">
-              <div class="arc-floating-thumb">
-                <span class="hero-tech-badge-icon">⚡</span>
-              </div>
-              <div class="arc-floating-info">
-                <strong>Full-Stack Architecture</strong>
-                <span>Sub-100ms &bull; Zero Bloat Systems</span>
-              </div>
+            <!-- Floating Experience Badge -->
+            <div class="floating-exp-badge">
+              <span class="exp-number">5+</span>
+              <span class="exp-label">Years of<br>Experience</span>
             </div>
 
-            <!-- Floating Live Status Badge (Top-Right) -->
-            <div class="arc-floating-stat-tag">
-              <span class="pulse-dot"></span>
-              <span>Next.js &bull; WP REST API</span>
+            <!-- Floating Active Status -->
+            <div class="floating-status-pill">
+              <span class="status-dot"></span>
+              <span>Available for Projects</span>
             </div>
           </div>
         </div>
@@ -140,397 +189,910 @@
       </div>
     </section>
 
-    <!-- SECTION 2: SERVICES ("From Concept to Reality.") -->
-    <section class="arc-services-section" id="services">
+    <!-- METRICS STRIP (Matching the 4-box strip at the bottom of the reference) -->
+    <section class="metrics-counter-section">
       <div class="container">
+        <div class="metrics-card-strip">
+          <div class="metric-block">
+            <div class="metric-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+              </svg>
+            </div>
+            <div class="metric-text-group">
+              <div class="metric-digits">50+</div>
+              <div class="metric-caption">Live Enterprise Projects</div>
+            </div>
+          </div>
 
-        <!-- Services Header Row -->
-        <div class="arc-services-header">
-          <div class="arc-services-title-col">
-            <span class="arc-kicker">OUR SERVICES</span>
-            <h2 class="arc-section-heading">From Concept to Reality.</h2>
+          <div class="metric-divider"></div>
+
+          <div class="metric-block">
+            <div class="metric-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <div class="metric-text-group">
+              <div class="metric-digits">90+</div>
+              <div class="metric-caption">Core Web Vitals Target</div>
+            </div>
           </div>
-          <div class="arc-services-desc-col">
-            <p>
-              We offer end-to-end WordPress architecture, headless Next.js integrations, and custom WooCommerce design services tailored to your lifestyle and scale.
+
+          <div class="metric-divider"></div>
+
+          <div class="metric-block">
+            <div class="metric-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+            </div>
+            <div class="metric-text-group">
+              <div class="metric-digits">5+</div>
+              <div class="metric-caption">Years of Experience</div>
+            </div>
+          </div>
+
+          <div class="metric-divider"></div>
+
+          <div class="metric-block">
+            <div class="metric-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="8.5" cy="7" r="4" />
+                <line x1="20" y1="8" x2="20" y2="14" />
+                <line x1="23" y1="11" x2="17" y2="11" />
+              </svg>
+            </div>
+            <div class="metric-text-group">
+              <div class="metric-digits">30%–45%</div>
+              <div class="metric-caption">Average Speed &amp; TTFB Boost</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUSTED CLIENTS STRIP -->
+    <section class="trust-clients-strip">
+      <div class="container">
+        <p class="trust-subtitle">Trusted by fast-growing platforms across US, UK, Australia &amp; Europe</p>
+        <div class="client-tags-row">
+          <span class="client-tag">ZAPTA Technologies</span>
+          <span class="client-tag">CyberNest Inc</span>
+          <span class="client-tag">GlowUp Supply</span>
+          <span class="client-tag">EmployerEase</span>
+          <span class="client-tag">Harmain Rides</span>
+          <span class="client-tag">Uniweb Norway</span>
+          <span class="client-tag">OFPF Australia</span>
+          <span class="client-tag">Traffic Summits</span>
+          <span class="client-tag">Winston Warren</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- "WHAT WE DO" / SERVICES SECTION -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-kicker">OUR SERVICES</span>
+          <h2 class="section-heading">What We Do</h2>
+          <p class="section-subheading">
+            We build fast, secure, scalable websites and modern web platforms tailored to your business goals.
+          </p>
+        </div>
+
+        <div class="services-cards-grid">
+
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Bespoke Web Development</h3>
+            <p class="service-card-desc">
+              Custom WordPress themes and plugins engineered from scratch with clean OOP PHP 8.x. Zero builder bloat and
+              guaranteed 90+ PageSpeed.
             </p>
+            <a href="#contact" class="service-card-link">Learn More &rarr;</a>
           </div>
-          <div class="arc-services-btn-col">
-            <a href="#contact" class="arc-btn-outline">
-              <span>View All Services</span>
-              <span class="arc-btn-arrow">&rarr;</span>
+
+          <!-- Card 2 -->
+          <div class="service-card featured-service">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Headless WordPress &amp; React</h3>
+            <p class="service-card-desc">
+              Decouple your frontend using Next.js / React with WordPress REST API or WPGraphQL. Deliver instant page
+              transitions and modern UX.
+            </p>
+            <a href="#headless" class="service-card-link">Explore Architecture &rarr;</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+                <path d="M12 12L2.1 7.1" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">AI Integrations &amp; Automation</h3>
+            <p class="service-card-desc">
+              Integrate OpenAI GPT-4o and Claude APIs into custom WordPress workflows for automated metadata, smart
+              semantic search, and AI chatbots.
+            </p>
+            <a href="#headless" class="service-card-link">Test AI Playground &rarr;</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">High-Volume WooCommerce</h3>
+            <p class="service-card-desc">
+              Bespoke checkout flows, B2B wholesale pricing tiers, dynamic shipping calculations, and certified
+              Stripe/PayPal webhook pipelines.
+            </p>
+            <a href="#work" class="service-card-link">View E-Com Stores &rarr;</a>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Speed Tuning (90+ Guaranteed)</h3>
+            <p class="service-card-desc">
+              Redis object caching, database schema indexing, LiteSpeed, Cloudflare APO, and critical asset pruning to
+              achieve sub-1.5s LCP.
+            </p>
+            <a href="#contact" class="service-card-link">Request Speed Audit &rarr;</a>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card">
+            <div class="service-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Security &amp; Zero-Downtime Migrations</h3>
+            <p class="service-card-desc">
+              Forensic malware cleanup, backdoor eradication, server firewall hardening, and seamless migrations across
+              VPS, Cloudways, or cPanel.
+            </p>
+            <a href="#contact" class="service-card-link">Harden Your Site &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- "ABOUT US / ABOUT ME" (Matching the reference layout) -->
+    <section class="about-section" id="about">
+      <div class="container about-container">
+
+        <!-- Left Column: Story & Checklist -->
+        <div class="about-left-copy">
+          <span class="section-kicker">ABOUT ME</span>
+          <h2 class="section-heading">
+            We're a team of creatives and <span style="color: #111827;">problem solvers.</span>
+          </h2>
+
+          <p class="about-p">
+            I am <strong>Touseef Raza</strong>, a Senior WordPress and Full-Stack PHP Developer with <strong>5+ years of
+              enterprise experience</strong> architecting, optimizing, and securing high-volume web systems for clients
+            across Australia, the United States, and Europe.
+          </p>
+
+          <p class="about-p">
+            We combine rigorous Computer Science fundamentals (<strong>BSc CS from Government College University,
+              Lahore</strong>) with modern engineering principles to build solutions that make an impact.
+          </p>
+
+          <!-- Checked Bullet Points with Orange Checks -->
+          <div class="about-checklist">
+            <div class="check-item">
+              <span class="check-circle">&check;</span>
+              <span><strong>Strategy &amp; Architecture:</strong> Clean, maintainable OOP PHP 8.x codebase</span>
+            </div>
+            <div class="check-item">
+              <span class="check-circle">&check;</span>
+              <span><strong>Gutenberg Block Suites:</strong> ACF Pro flexible modules for easy visual editing</span>
+            </div>
+            <div class="check-item">
+              <span class="check-circle">&check;</span>
+              <span><strong>Decoupled Headless:</strong> React / Next.js frontends with custom REST APIs</span>
+            </div>
+            <div class="check-item">
+              <span class="check-circle">&check;</span>
+              <span><strong>Certified AI Integration:</strong> Google Prompting Essentials Specialization</span>
+            </div>
+            <div class="check-item">
+              <span class="check-circle">&check;</span>
+              <span><strong>Production Record:</strong> ZAPTA Technologies &bull; CyberNest &bull; Astute</span>
+            </div>
+          </div>
+
+          <div class="about-btn-row">
+            <a href="#contact" class="btn btn-pill-orange">
+              <span>Start a Project</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="https://github.com/touseefr" target="_blank" rel="noopener noreferrer"
+              class="btn btn-pill-secondary">
+              <span>View GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/touseefraza" target="_blank" rel="noopener noreferrer"
+              class="btn btn-pill-secondary">
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>
 
-        <!-- 4 Sculptural Cards Grid (Matching the 4 cards in screenshot) -->
-        <div class="arc-services-grid">
+        <!-- Right Column: Card with Orange Accent Border & Floating Badge -->
+        <div class="about-right-visual">
+          <div class="about-visual-card">
 
-          <!-- Card 01: Architectural Design / Custom WP -->
-          <div class="arc-service-card">
-            <div class="arc-card-arch">
-              <img src="service_code.jpg" alt="Architectural Web Design &amp; OOP PHP Theme Engineering" class="arc-arch-img">
+            <div class="about-card-inner">
+              <div class="developer-monogram-large">TR</div>
+              <h3 class="dev-name">Touseef Raza</h3>
+              <p class="dev-role">Senior WordPress Architect &bull; Full-Stack PHP</p>
+
+              <div class="dev-cred-strip">
+                <div class="cred-pill">🎓 BSc Computer Science (GCU Lahore)</div>
+                <div class="cred-pill">🤖 Google Prompting Essentials Certified</div>
+                <div class="cred-pill">⚡ 90+ Core Web Vitals Specialist</div>
+              </div>
+
+              <div class="dev-bio-summary">
+                "Specialized in eliminating bloated page-builder dependencies, speeding up database queries by 40%, and
+                delivering high-converting WooCommerce and Headless React platforms."
+              </div>
             </div>
-            <div class="arc-card-meta">
-              <span class="arc-card-num">01</span>
-              <h3 class="arc-card-title">Architectural Web Design</h3>
-              <p class="arc-card-desc">Bespoke OOP PHP 8.x theme architectures and ACF Pro flexible content blocks engineered from scratch with zero page-builder bloat.</p>
+
+            <!-- Solid Orange Badge (Matching 8+ Years of Experience in Reference Image) -->
+            <div class="about-solid-badge">
+              <span class="badge-num">5+</span>
+              <span class="badge-txt">Years of<br>Experience</span>
             </div>
-            <a href="#contact" class="arc-card-arrow-btn" aria-label="Learn more about Architectural Web Design">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+
           </div>
-
-          <!-- Card 02: Interior Design / High-Scale WooCommerce -->
-          <div class="arc-service-card">
-            <div class="arc-card-arch">
-              <img src="service_store.jpg" alt="High-Scale WooCommerce &amp; Checkout Optimization" class="arc-arch-img">
-            </div>
-            <div class="arc-card-meta">
-              <span class="arc-card-num">02</span>
-              <h3 class="arc-card-title">High-Scale WooCommerce</h3>
-              <p class="arc-card-desc">Frictionless checkout experiences, direct Stripe &amp; PayPal API integrations, and sub-1.5s load times for maximum customer conversion.</p>
-            </div>
-            <a href="#contact" class="arc-card-arrow-btn" aria-label="Learn more about High-Scale WooCommerce">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-
-          <!-- Card 03: Landscape Design / Decoupled Headless & AI -->
-          <div class="arc-service-card">
-            <div class="arc-card-arch">
-              <img src="service_landscape.jpg" alt="Decoupled Headless React &amp; AI Integration" class="arc-arch-img">
-            </div>
-            <div class="arc-card-meta">
-              <span class="arc-card-num">03</span>
-              <h3 class="arc-card-title">Decoupled Headless &amp; AI</h3>
-              <p class="arc-card-desc">Modern Next.js / React frontends powered by WordPress REST API &amp; WPGraphQL, enriched with automated OpenAI GPT-4o schema intelligence.</p>
-            </div>
-            <a href="#headless" class="arc-card-arrow-btn" aria-label="Learn more about Decoupled Headless & AI">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-
-          <!-- Card 04: 3D Visualization / Speed Optimization -->
-          <div class="arc-service-card">
-            <div class="arc-card-arch">
-              <img src="service_3d.jpg" alt="Speed Optimization &amp; 95+ Core Web Vitals" class="arc-arch-img">
-            </div>
-            <div class="arc-card-meta">
-              <span class="arc-card-num">04</span>
-              <h3 class="arc-card-title">Speed Tuning (95+ Guaranteed)</h3>
-              <p class="arc-card-desc">Server-level Redis object caching, database schema indexing, LiteSpeed tuning, and critical asset pruning for instant page paint.</p>
-            </div>
-            <a href="#contact" class="arc-card-arrow-btn" aria-label="Learn more about Speed Tuning">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION 3: FEATURED PROJECTS ("Real Spaces. Real Stories.") -->
-    <!-- Dark warm charcoal contrast section matching the screenshot -->
-    <section class="arc-projects-section" id="projects">
+    <!-- SELECTED PROJECTS / CASE STUDIES (Matching "Selected Projects" in reference) -->
+    <section class="work-section" id="work">
       <div class="container">
 
-        <div class="arc-projects-layout">
-          <!-- Left Column / Header -->
-          <div class="arc-projects-sidebar">
-            <span class="arc-kicker arc-kicker-dark">FEATURED PROJECTS</span>
-            <h2 class="arc-section-heading arc-heading-dark">Real Spaces.<br>Real Stories.</h2>
-            <p class="arc-desc-dark">
-              A selection of our favorite production platforms and enterprise architectures around the world.
-            </p>
-            <div class="arc-projects-action">
-              <button class="arc-btn-dark-outline" id="toggleAllProjectsBtn">
-                <span id="allProjectsToggleText">View All 10 Projects</span>
-                <span class="arc-btn-arrow">&rarr;</span>
+        <div class="work-header-row">
+          <div>
+            <span class="section-kicker">OUR WORK</span>
+            <h2 class="section-heading">Selected Projects</h2>
+          </div>
+          <a href="#contact" class="work-view-all">View All Case Studies &rarr;</a>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="work-filter-bar">
+          <button class="filter-pill active" data-filter="all">All Projects</button>
+          <button class="filter-pill" data-filter="headless">Headless &amp; Portals</button>
+          <button class="filter-pill" data-filter="ecommerce">WooCommerce &amp; B2B</button>
+          <button class="filter-pill" data-filter="custom">Custom Themes</button>
+          <button class="filter-pill" data-filter="booking">Booking Engines</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-display-grid" id="projectsDisplayGrid">
+
+          <!-- 1: ZAPTA Technologies -->
+          <article class="project-item-card" data-category="headless custom" data-id="zapta">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">zaptatech.com</span>
+              </div>
+              <div class="preview-img-wrap">
+                <img src="shots/zapta.jpg" alt="ZAPTA Technologies live platform screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://zaptatech.com" target="_blank" rel="noopener noreferrer" class="preview-overlay-btn"
+                  title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge">Corporate Portal</span>
+                <a href="https://zaptatech.com" target="_blank" rel="noopener noreferrer" class="project-domain-link"
+                  title="Open live platform">
+                  zaptatech.com ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">ZAPTA Technologies</h3>
+              <p class="project-item-desc">
+                High-concurrency technology portal. Architected 100% bespoke theme using OOP PHP 8.x, eradicating
+                commercial plugins and implementing server-level Redis caching.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>95+</strong><span>PageSpeed</span></div>
+                <div class="p-stat"><strong>-40%</strong><span>Load Time</span></div>
+                <div class="p-stat"><strong>0</strong><span>Bloat</span></div>
+              </div>
+              <div class="project-chips">
+                <span>Custom Theme</span>
+                <span>OOP PHP 8</span>
+                <span>Redis Cache</span>
+                <span>Cloudflare APO</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="zapta">
+                View Architecture Breakdown &rarr;
               </button>
             </div>
-          </div>
+          </article>
 
-          <!-- Right Column / 4 Tall Rounded Cards -->
-          <div class="arc-projects-row">
+          <!-- 2: GlowUp Supply -->
+          <article class="project-item-card" data-category="ecommerce custom" data-id="glowup">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">glowup.supply</span>
+              </div>
+              <div class="preview-img-wrap">
+                <img src="shots/glowup.jpg" alt="GlowUp Supply live store screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://glowup.supply" target="_blank" rel="noopener noreferrer" class="preview-overlay-btn"
+                  title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge ecom">High-Volume E-Commerce</span>
+                <a href="https://glowup.supply" target="_blank" rel="noopener noreferrer" class="project-domain-link"
+                  title="Open live platform">
+                  glowup.supply ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">GlowUp Supply</h3>
+              <p class="project-item-desc">
+                Beauty &amp; cosmetics store. Built custom checkout pipeline, instant AJAX product filters, Stripe
+                payment gateway, and achieved sub-1.5s load times.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>&lt; 1.5s</strong><span>Full Load</span></div>
+                <div class="p-stat"><strong>+28%</strong><span>Conversions</span></div>
+                <div class="p-stat"><strong>AJAX</strong><span>Filters</span></div>
+              </div>
+              <div class="project-chips">
+                <span>WooCommerce</span>
+                <span>Stripe SDK</span>
+                <span>Core Web Vitals</span>
+                <span>Custom JS</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="glowup">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
 
-            <!-- Card 1: ZAPTA Technologies (Matching Seaside Villa style) -->
-            <article class="arc-project-card open-modal-btn" data-project="zapta">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/zapta.jpg" alt="ZAPTA Technologies live enterprise platform" class="arc-proj-img">
+          <!-- 3: EmployerEase -->
+          <article class="project-item-card" data-category="headless custom" data-id="employerease">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">employerease.com</span>
               </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">ZAPTA Technologies</h3>
-                  <span class="arc-proj-loc">San Francisco, USA &bull; Tech Portal</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open ZAPTA case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
+              <div class="preview-img-wrap">
+                <img src="shots/employerease.jpg" alt="EmployerEase live platform screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://employerease.com" target="_blank" rel="noopener noreferrer" class="preview-overlay-btn"
+                  title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
               </div>
-            </article>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge">B2B HR Platform</span>
+                <a href="https://employerease.com" target="_blank" rel="noopener noreferrer" class="project-domain-link"
+                  title="Open live platform">
+                  employerease.com ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">EmployerEase</h3>
+              <p class="project-item-desc">
+                US employee benefits platform. Architected dynamic quote calculators, automated lead capture pipelines,
+                and performed enterprise security hardening.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>100%</strong><span>Hardened</span></div>
+                <div class="p-stat"><strong>Live</strong><span>Quote Calc</span></div>
+                <div class="p-stat"><strong>B2B</strong><span>Lead Flow</span></div>
+              </div>
+              <div class="project-chips">
+                <span>Custom Forms</span>
+                <span>REST API</span>
+                <span>Security Hardening</span>
+                <span>Wordfence</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="employerease">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
 
-            <!-- Card 2: GlowUp Supply (Matching Urban Residence style) -->
-            <article class="arc-project-card open-modal-btn" data-project="glowup">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/glowup.jpg" alt="GlowUp Supply live WooCommerce store" class="arc-proj-img">
+          <!-- 4: Harmain Rides -->
+          <article class="project-item-card" data-category="booking headless" data-id="harmain">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">harmainrides.com</span>
               </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">GlowUp Supply</h3>
-                  <span class="arc-proj-loc">London, UK &bull; WooCommerce</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open GlowUp Supply case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
+              <div class="preview-img-wrap">
+                <img src="shots/harmain.jpg" alt="Harmain Rides live booking portal screenshot"
+                  class="project-screenshot" loading="lazy">
+                <a href="https://harmainrides.com" target="_blank" rel="noopener noreferrer" class="preview-overlay-btn"
+                  title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
               </div>
-            </article>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge booking">Booking Engine</span>
+                <a href="https://harmainrides.com" target="_blank" rel="noopener noreferrer" class="project-domain-link"
+                  title="Open live platform">
+                  harmainrides.com ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">Harmain Rides</h3>
+              <p class="project-item-desc">
+                Chauffeur &amp; luxury transport booking engine. Built route distance calculation via Google Maps
+                Distance Matrix API, multi-step booking modal UX, and online deposits.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>Maps API</strong><span>Live Routing</span></div>
+                <div class="p-stat"><strong>Dynamic</strong><span>Fare Engine</span></div>
+                <div class="p-stat"><strong>Auto</strong><span>SMS Alerts</span></div>
+              </div>
+              <div class="project-chips">
+                <span>Google Maps API</span>
+                <span>REST API</span>
+                <span>OOP PHP</span>
+                <span>Booking Modal</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="harmain">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
 
-            <!-- Card 3: Harmain Rides (Matching Mountain Retreat style) -->
-            <article class="arc-project-card open-modal-btn" data-project="harmain">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/harmain.jpg" alt="Harmain Rides dynamic booking engine" class="arc-proj-img">
+          <!-- 5: OFPF Australia -->
+          <article class="project-item-card" data-category="ecommerce" data-id="ofpf">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">ofpf.com.au</span>
               </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">Harmain Rides</h3>
-                  <span class="arc-proj-loc">Makkah, KSA &bull; Booking Engine</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open Harmain Rides case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
+              <div class="preview-img-wrap">
+                <img src="shots/ofpf.jpg" alt="OFPF Australia live e-commerce screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://ofpf.com.au" target="_blank" rel="noopener noreferrer" class="preview-overlay-btn"
+                  title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
               </div>
-            </article>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge ecom">B2B E-Commerce &bull; Australia</span>
+                <a href="https://ofpf.com.au" target="_blank" rel="noopener noreferrer" class="project-domain-link"
+                  title="Open live platform">
+                  ofpf.com.au ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">OFPF Australia</h3>
+              <p class="project-item-desc">
+                Australian commercial fresh produce supplier. Implemented customer role-based wholesale pricing,
+                automated order scheduling, and dynamic regional freight tiers.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>B2B</strong><span>Wholesale Tiers</span></div>
+                <div class="p-stat"><strong>Custom</strong><span>Shipping Rules</span></div>
+                <div class="p-stat"><strong>AU</strong><span>Postcodes</span></div>
+              </div>
+              <div class="project-chips">
+                <span>WooCommerce</span>
+                <span>Dynamic Pricing</span>
+                <span>Custom PHP</span>
+                <span>Australia</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="ofpf">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
 
-            <!-- Card 4: Uniweb Norway (Matching Minimal Apartment style) -->
-            <article class="arc-project-card open-modal-btn" data-project="uniweb">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/uniweb.jpg" alt="Uniweb Norway agency portal" class="arc-proj-img">
+          <!-- 6: Uniweb Norway -->
+          <article class="project-item-card" data-category="custom" data-id="uniweb">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">uniweb.no</span>
               </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">Uniweb Norway</h3>
-                  <span class="arc-proj-loc">Oslo, Norway &bull; Agency Portal</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open Uniweb Norway case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
+              <div class="preview-img-wrap">
+                <img src="shots/uniweb.jpg" alt="Uniweb Norway live agency portal screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://uniweb.no" target="_blank" rel="noopener noreferrer" class="preview-overlay-btn"
+                  title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
               </div>
-            </article>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge">Agency Portal &bull; Norway</span>
+                <a href="https://uniweb.no" target="_blank" rel="noopener noreferrer" class="project-domain-link"
+                  title="Open live platform">
+                  uniweb.no ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">Uniweb Norway</h3>
+              <p class="project-item-desc">
+                Scandinavian digital web agency portal. Developed multilingual localization architecture, custom ACF Pro
+                modular blocks, and internationalized speed optimization.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>Multi</strong><span>Language</span></div>
+                <div class="p-stat"><strong>ACF Pro</strong><span>Blocks</span></div>
+                <div class="p-stat"><strong>90+</strong><span>Speed</span></div>
+              </div>
+              <div class="project-chips">
+                <span>ACF Pro</span>
+                <span>Multilingual</span>
+                <span>OOP PHP</span>
+                <span>Norway</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="uniweb">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
 
-          </div>
+          <!-- 7: Traffic Summits -->
+          <article class="project-item-card" data-category="custom headless" data-id="trafficsummits">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">trafficsummits.com</span>
+              </div>
+              <div class="preview-img-wrap">
+                <img src="shots/trafficsummits.jpg" alt="Traffic Summits live conference platform screenshot"
+                  class="project-screenshot" loading="lazy">
+                <a href="https://trafficsummits.com" target="_blank" rel="noopener noreferrer"
+                  class="preview-overlay-btn" title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge">Global Expo &amp; Summit</span>
+                <a href="https://trafficsummits.com" target="_blank" rel="noopener noreferrer"
+                  class="project-domain-link" title="Open live platform">
+                  trafficsummits.com ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">Traffic Summits</h3>
+              <p class="project-item-desc">
+                Global marketing conference &amp; expo portal. Engineered high-traffic speaker &amp; multi-track agenda
+                schedule modules with ACF Pro, ticket checkout, and GA4/GTM.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>High</strong><span>Traffic</span></div>
+                <div class="p-stat"><strong>Custom</strong><span>Agenda CPT</span></div>
+                <div class="p-stat"><strong>GA4/GTM</strong><span>Tracking</span></div>
+              </div>
+              <div class="project-chips">
+                <span>ACF Pro</span>
+                <span>Ticket Flow</span>
+                <span>High Traffic</span>
+                <span>GTM / GA4</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="trafficsummits">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- 8: Winston Warren -->
+          <article class="project-item-card" data-category="custom" data-id="winston">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">winstonwarren.com</span>
+              </div>
+              <div class="preview-img-wrap">
+                <img src="shots/winston.jpg" alt="Winston Warren live consultancy screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://winstonwarren.com" target="_blank" rel="noopener noreferrer"
+                  class="preview-overlay-btn" title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge">Corporate Advisory</span>
+                <a href="https://winstonwarren.com" target="_blank" rel="noopener noreferrer"
+                  class="project-domain-link" title="Open live platform">
+                  winstonwarren.com ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">Winston Warren</h3>
+              <p class="project-item-desc">
+                Executive business consultancy platform. Pixel-perfect conversion from Figma design, bespoke typography,
+                zero commercial plugins, and 95+ mobile PageSpeed.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>95+</strong><span>Mobile Speed</span></div>
+                <div class="p-stat"><strong>100%</strong><span>Figma Match</span></div>
+                <div class="p-stat"><strong>&lt; 1s</strong><span>First Paint</span></div>
+              </div>
+              <div class="project-chips">
+                <span>Figma-to-WP</span>
+                <span>Vanilla CSS</span>
+                <span>OOP PHP</span>
+                <span>Security</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="winston">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- 9: ItsMoxy -->
+          <article class="project-item-card" data-category="custom" data-id="itsmoxy">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">itsmoxy.com</span>
+              </div>
+              <div class="preview-img-wrap">
+                <img src="shots/itsmoxy.jpg" alt="ItsMoxy live digital agency screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://itsmoxy.com" target="_blank" rel="noopener noreferrer" class="preview-overlay-btn"
+                  title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge">Creative Agency Showcase</span>
+                <a href="https://itsmoxy.com" target="_blank" rel="noopener noreferrer" class="project-domain-link"
+                  title="Open live platform">
+                  itsmoxy.com ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">ItsMoxy</h3>
+              <p class="project-item-desc">
+                Digital brand agency showcase. Features high-speed asset loading, micro-interactions, custom 60fps
+                animations, and clean technical SEO schema markup.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>60fps</strong><span>Animations</span></div>
+                <div class="p-stat"><strong>Sub-1s</strong><span>First Paint</span></div>
+                <div class="p-stat"><strong>Schema</strong><span>Rich Snippet</span></div>
+              </div>
+              <div class="project-chips">
+                <span>Custom JS</span>
+                <span>CSS Animations</span>
+                <span>Technical SEO</span>
+                <span>Figma-to-WP</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="itsmoxy">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
+
+          <!-- 10: Anode Electrical AU -->
+          <article class="project-item-card" data-category="custom" data-id="anode">
+            <div class="project-preview-frame">
+              <div class="browser-dots-bar">
+                <span class="b-dot dot-r"></span>
+                <span class="b-dot dot-y"></span>
+                <span class="b-dot dot-g"></span>
+                <span class="browser-url-pill">anodeelectrical.com.au</span>
+              </div>
+              <div class="preview-img-wrap">
+                <img src="shots/anode.jpg" alt="Anode Electrical AU live portal screenshot" class="project-screenshot"
+                  loading="lazy">
+                <a href="https://anodeelectrical.com.au" target="_blank" rel="noopener noreferrer"
+                  class="preview-overlay-btn" title="Open live platform">
+                  <span>Visit Live Platform</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-content-body">
+              <div class="project-header-bar">
+                <span class="project-category-badge">Commercial Portal &bull; Australia</span>
+                <a href="https://anodeelectrical.com.au" target="_blank" rel="noopener noreferrer"
+                  class="project-domain-link" title="Open live platform">
+                  anodeelectrical.com.au ↗
+                </a>
+              </div>
+              <h3 class="project-item-title">Anode Electrical AU</h3>
+              <p class="project-item-desc">
+                Australian commercial electrical enterprise. Developed custom service quotation forms, interactive
+                project gallery, and local Australian technical SEO schema.
+              </p>
+              <div class="project-stats-strip">
+                <div class="p-stat"><strong>Top Rank</strong><span>Local SEO</span></div>
+                <div class="p-stat"><strong>Instant</strong><span>Quote Engine</span></div>
+                <div class="p-stat"><strong>100%</strong><span>Responsive</span></div>
+              </div>
+              <div class="project-chips">
+                <span>Local SEO</span>
+                <span>Custom Forms</span>
+                <span>Figma-to-WP</span>
+                <span>Australia</span>
+              </div>
+              <button class="btn btn-pill-orange btn-sm open-modal-btn" data-project="anode">
+                View Architecture Breakdown &rarr;
+              </button>
+            </div>
+          </article>
+
         </div>
-
-        <!-- COLLAPSIBLE DIRECTORY: The Remaining 6 Verified Projects -->
-        <div class="arc-more-projects-drawer" id="allProjectsDrawer">
-          <div class="arc-drawer-header">
-            <h4 class="arc-drawer-title">Additional Production Case Studies</h4>
-            <p class="arc-drawer-sub">Click any platform below to inspect full architecture, challenge, solution &amp; KPIs</p>
-          </div>
-          <div class="arc-drawer-grid">
-
-            <!-- 5: EmployerEase -->
-            <article class="arc-project-card open-modal-btn" data-project="employerease">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/employerease.jpg" alt="EmployerEase B2B Platform" class="arc-proj-img">
-              </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">EmployerEase</h3>
-                  <span class="arc-proj-loc">Dallas, USA &bull; B2B Portal</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open EmployerEase case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <!-- 6: OFPF Australia -->
-            <article class="arc-project-card open-modal-btn" data-project="ofpf">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/ofpf.jpg" alt="OFPF Australia Fresh Produce" class="arc-proj-img">
-              </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">OFPF Australia</h3>
-                  <span class="arc-proj-loc">Sydney, AU &bull; B2B Produce</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open OFPF case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <!-- 7: Traffic Summits -->
-            <article class="arc-project-card open-modal-btn" data-project="trafficsummits">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/trafficsummits.jpg" alt="Traffic Summits Global Expo" class="arc-proj-img">
-              </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">Traffic Summits</h3>
-                  <span class="arc-proj-loc">Zurich, CH &bull; Global Expo</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open Traffic Summits case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <!-- 8: Winston Warren -->
-            <article class="arc-project-card open-modal-btn" data-project="winston">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/winston.jpg" alt="Winston Warren Advisory" class="arc-proj-img">
-              </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">Winston Warren</h3>
-                  <span class="arc-proj-loc">Melbourne, AU &bull; Advisory</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open Winston Warren case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <!-- 9: ItsMoxy -->
-            <article class="arc-project-card open-modal-btn" data-project="itsmoxy">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/itsmoxy.jpg" alt="ItsMoxy Creative Agency" class="arc-proj-img">
-              </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">ItsMoxy</h3>
-                  <span class="arc-proj-loc">London, UK &bull; Creative Agency</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open ItsMoxy case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
-            </article>
-
-            <!-- 10: Anode Electrical AU -->
-            <article class="arc-project-card open-modal-btn" data-project="anode">
-              <div class="arc-proj-img-wrap">
-                <img src="shots/anode.jpg" alt="Anode Electrical Australia" class="arc-proj-img">
-              </div>
-              <div class="arc-proj-overlay">
-                <div class="arc-proj-info">
-                  <h3 class="arc-proj-title">Anode Electrical</h3>
-                  <span class="arc-proj-loc">Brisbane, AU &bull; Commercial</span>
-                </div>
-                <button class="arc-proj-arrow-btn" aria-label="Open Anode Electrical case study">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- SECTION 4: ABOUT US ("Designing a Better Everyday.") -->
-    <section class="arc-about-section" id="about">
-      <div class="container arc-about-container">
-
-        <!-- Left: Wide Panoramic Architectural Photo -->
-        <div class="arc-about-photo-col">
-          <div class="arc-about-frame">
-            <img src="about_interior.jpg" alt="Modern Organic Architecture &amp; Studio Interior" class="arc-about-img">
-          </div>
-        </div>
-
-        <!-- Center: Story & Ethos -->
-        <div class="arc-about-story-col">
-          <span class="arc-kicker">ABOUT US</span>
-          <h2 class="arc-section-heading">Designing a Better Everyday.</h2>
-          <p class="arc-about-p">
-            At Arcora &bull; Touseef Raza, we believe great engineering goes beyond looks &mdash; it creates a better way of living and operating online. With a BSc in Computer Science from GCU Lahore and 5+ years of production experience, I combine creativity, architectural functionality, and meticulous attention to detail to bring your digital vision to life.
-          </p>
-          <div class="arc-about-badges">
-            <span class="arc-badge-pill">🎓 BSc Computer Science &bull; GCU Lahore</span>
-            <span class="arc-badge-pill">🤖 Google Prompting Certified</span>
-            <span class="arc-badge-pill">⚡ 95+ Core Web Vitals Specialist</span>
-          </div>
-        </div>
-
-        <!-- Right: Vertical Stats Column with clean dividers (Matching Screenshot) -->
-        <div class="arc-about-stats-col">
-          <div class="arc-stat-row">
-            <div class="arc-stat-num">10+</div>
-            <div class="arc-stat-label">Years of Experience &amp; Mastery</div>
-          </div>
-          <div class="arc-stat-divider"></div>
-          <div class="arc-stat-row">
-            <div class="arc-stat-num">250+</div>
-            <div class="arc-stat-label">Completed Deployments Worldwide</div>
-          </div>
-          <div class="arc-stat-divider"></div>
-          <div class="arc-stat-row">
-            <div class="arc-stat-num">98%</div>
-            <div class="arc-stat-label">Client Satisfaction &amp; Retention</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- INTERACTIVE HEADLESS & AI PLAYGROUND (Integrated Clean Architecture Tool) -->
-    <section class="arc-playground-section" id="headless">
+    <!-- INTERACTIVE HEADLESS & AI DEVELOPER PLAYGROUND -->
+    <section class="headless-section" id="headless">
       <div class="container">
-        <div class="arc-playground-header">
-          <span class="arc-kicker">DECOUPLED ARCHITECTURE PLAYGROUND</span>
-          <h2 class="arc-section-heading">Experience Decoupled WordPress in Action.</h2>
-          <p class="arc-playground-desc">
-            Test how a modern decoupled architecture queries live data via REST API and compares Redis Object Caching against cold MySQL execution.
+        <div class="section-title-wrap">
+          <span class="section-kicker">HEADLESS &amp; AI INTEGRATION</span>
+          <h2 class="section-heading">Experience Decoupled WordPress in Action</h2>
+          <p class="section-subheading">
+            See how a modern decoupled architecture fetches live data via REST API and enriches it with OpenAI GPT-4o.
           </p>
         </div>
 
-        <div class="arc-playground-card">
-          <div class="arc-playground-toolbar">
-            <div class="arc-toolbar-group">
+        <div class="playground-card">
+          <div class="playground-toolbar">
+            <div class="toolbar-item">
               <label for="playgroundEndpoint">Target API Endpoint:</label>
-              <select id="playgroundEndpoint" class="arc-select">
+              <select id="playgroundEndpoint" class="clean-select">
                 <option value="posts">/wp-json/wp/v2/posts (Headless Blog Engine)</option>
                 <option value="products">/wp-json/wc/v3/products (WooCommerce Catalog API)</option>
                 <option value="ai-seo">/wp-json/ai-engine/v1/enrich (OpenAI Schema Engine)</option>
               </select>
             </div>
 
-            <div class="arc-toolbar-group">
+            <div class="toolbar-item">
               <label for="playgroundCacheToggle">Redis Object Cache:</label>
-              <div class="arc-toggle-wrap">
+              <div class="toggle-switch">
                 <input type="checkbox" id="playgroundCacheToggle" checked>
-                <span id="playgroundCacheStatus" class="arc-cache-status">Redis HIT (8ms)</span>
+                <label for="playgroundCacheToggle" class="toggle-track"></label>
+                <span id="playgroundCacheStatus" class="cache-indicator">Redis HIT (8ms)</span>
               </div>
             </div>
 
-            <button id="playgroundRunBtn" class="arc-btn-dark arc-btn-sm">
+            <button id="playgroundRunBtn" class="btn btn-pill-orange btn-sm">
               <span>Execute Query</span>
-              <span class="arc-btn-arrow">&rarr;</span>
+              <span class="btn-arrow">&rarr;</span>
             </button>
           </div>
 
-          <div class="arc-playground-split">
-            <div class="arc-screen-col">
-              <div class="arc-screen-bar">
-                <span class="arc-screen-title">React Client Preview (Next.js 15)</span>
-                <span class="arc-screen-pill">Frontend</span>
+          <!-- Split Screen: React Preview vs Raw JSON -->
+          <div class="playground-split">
+            <div class="screen-col">
+              <div class="screen-header">
+                <span class="screen-title">React Client Preview (Next.js 15)</span>
+                <span class="screen-badge">Frontend</span>
               </div>
-              <div class="arc-screen-body" id="playgroundClientView">
-                <!-- Dynamically populated via script.js -->
+              <div class="screen-body" id="playgroundClientView">
+                <!-- Dynamically rendered -->
               </div>
             </div>
 
-            <div class="arc-screen-col">
-              <div class="arc-screen-bar">
-                <span class="arc-screen-title">WordPress REST API Response</span>
-                <span class="arc-screen-pill arc-pill-green" id="playgroundStatusPill">200 OK &bull; 10ms</span>
+            <div class="screen-col">
+              <div class="screen-header">
+                <span class="screen-title">WordPress REST API Response</span>
+                <span class="screen-badge orange-badge" id="playgroundStatusPill">200 OK &bull; 10ms</span>
               </div>
-              <div class="arc-screen-body arc-json-terminal">
+              <div class="screen-body json-terminal">
                 <pre id="playgroundJsonView"><code>Loading simulation...</code></pre>
               </div>
             </div>
@@ -539,90 +1101,109 @@
       </div>
     </section>
 
-    <!-- SECTION 5: CONTACT & FOOTER ("Let's Build Your Vision.") -->
-    <section class="arc-contact-section" id="contact">
-      <div class="container arc-contact-container">
-
-        <div class="arc-contact-grid">
-          <!-- Left Column: Title & Subtitle -->
-          <div class="arc-contact-intro">
-            <h2 class="arc-contact-heading">Let's Build<br>Your Vision.</h2>
-            <p class="arc-contact-sub">
-              Ready to start your next project? We'd love to hear from you. Guaranteed response within 2–4 hours.
+    <!-- ORANGE CALL-TO-ACTION BANNER (Matching the exact Cambased banner in reference) -->
+    <section class="orange-cta-banner-section">
+      <div class="container">
+        <div class="orange-banner-card">
+          <div class="banner-content">
+            <h2 class="banner-heading">Let's build something great together.</h2>
+            <p class="banner-subtext">
+              Have a project in mind? Let's talk and bring your ideas to life with high performance, zero bloat, and
+              sub-second load times.
             </p>
+            <a href="#contact" class="btn btn-pill-white btn-lg">
+              <span>Get in Touch</span>
+              <span class="btn-arrow-orange">&rarr;</span>
+            </a>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Center Column: Floating Dark Form (Matching Screenshot) -->
-          <div class="arc-contact-form-wrap">
-            <form class="arc-contact-form" id="arcContactForm">
-              <div class="arc-form-row">
-                <input type="text" class="arc-input" id="contactName" placeholder="Your Name" required>
-                <input type="email" class="arc-input" id="contactEmail" placeholder="Your Email" required>
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-kicker">CONTACT US</span>
+          <h2 class="section-heading">Start a Conversation</h2>
+          <p class="section-subheading">
+            I reply to all client inquiries within 1–2 hours with a structured proposal.
+          </p>
+        </div>
+
+        <div class="contact-grid-layout">
+          <!-- Left: Direct Channels -->
+          <div class="contact-direct-card">
+            <h3 class="direct-title">Direct Connect</h3>
+            <p class="direct-desc">Feel free to email directly or message on WhatsApp for fast response.</p>
+
+            <div class="direct-channels-list">
+              <div class="channel-card">
+                <div class="channel-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="ch-label">Email Address</span>
+                  <a href="mailto:touseefraza409@gmail.com" class="ch-val">touseefraza409@gmail.com</a>
+                </div>
+                <button class="channel-copy-btn" id="copyEmailTrigger" title="Copy email">Copy</button>
               </div>
-              <div class="arc-form-row">
-                <textarea class="arc-textarea" id="contactMessage" placeholder="Tell us about your project..." rows="3" required></textarea>
+
+              <div class="channel-card">
+                <div class="channel-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="ch-label">WhatsApp &amp; Phone</span>
+                  <a href="https://wa.me/923204436508" target="_blank" rel="noopener noreferrer" class="ch-val">+92 320
+                    4436508</a>
+                </div>
+                <a href="https://wa.me/923204436508" target="_blank" rel="noopener noreferrer"
+                  class="channel-copy-btn">Chat</a>
               </div>
-              <div class="arc-form-submit">
-                <button type="submit" class="arc-btn-light">
-                  <span>Send Message</span>
-                  <span class="arc-btn-arrow">&rarr;</span>
-                </button>
+
+              <div class="channel-card">
+                <div class="channel-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="ch-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/touseefraza" target="_blank" rel="noopener noreferrer"
+                    class="ch-val">linkedin.com/in/touseefraza</a>
+                </div>
+                <a href="https://linkedin.com/in/touseefraza" target="_blank" rel="noopener noreferrer"
+                  class="channel-copy-btn">Visit</a>
               </div>
-            </form>
-          </div>
 
-          <!-- Right Column: Direct Channels (Matching Screenshot) -->
-          <div class="arc-contact-direct">
-            <span class="arc-direct-kicker">OR REACH US DIRECTLY</span>
-            <div class="arc-direct-list">
-              <a href="https://wa.me/923235619375" target="_blank" rel="noopener noreferrer" class="arc-direct-item">
-                <span class="arc-direct-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </span>
-                <span class="arc-direct-val">+92 323 5619375</span>
-              </a>
-
-              <a href="mailto:touseefraza409@gmail.com" class="arc-direct-item">
-                <span class="arc-direct-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </span>
-                <span class="arc-direct-val">touseefraza409@gmail.com</span>
-              </a>
-
-              <div class="arc-direct-item">
-                <span class="arc-direct-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </span>
-                <span class="arc-direct-val">Lahore, PK &bull; Worldwide Remote</span>
+              <div class="channel-card">
+                <div class="channel-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="ch-label">Location</span>
+                  <span class="ch-static">Lahore, Pakistan &bull; Available Worldwide</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Atmospheric Accent Visual (Chair in stone niche) -->
-        <div class="arc-contact-ambient-frame">
-          <img src="contact_lounge.jpg" alt="Modern Minimalist Stone Architecture Lounge" class="arc-contact-ambient-img">
-        </div>
-
-        <!-- Footer Bottom Bar -->
-        <div class="arc-footer-bottom">
-          <div class="arc-footer-left">
-            <span class="arc-footer-brand">TOUSEEF RAZA</span>
-            <span class="arc-footer-copy">&copy; 2026 Touseef Raza. Architecture &bull; Code &bull; Speed. All rights reserved.</span>
-          </div>
-          <div class="arc-footer-right">
-            <a href="https://github.com/touseefr" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/touseefraza" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://wa.me/923235619375" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a href="#hero" class="arc-footer-top-btn">Back to Top &uarr;</a>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
 
-  <!-- CASE STUDY MODAL DIALOG (All 10 Real Projects from CV) -->
+  <!-- CASE STUDY MODAL DIALOG -->
   <div class="case-study-modal-overlay" id="caseStudyModalOverlay" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-card-box">
       <button class="modal-close-button" id="modalCloseButton" aria-label="Close dialog">&times;</button>
@@ -635,6 +1216,98 @@
   <!-- TOAST FEEDBACK NOTIFICATIONS -->
   <div class="toast-stack" id="toastStack" aria-live="polite"></div>
 
+  <!-- SITE FOOTER -->
+  <section class="arc-contact-section" id="contact">
+    <div class="container arc-contact-container">
+
+      <div class="arc-contact-grid">
+        <!-- Left Column: Title & Subtitle -->
+        <div class="arc-contact-intro">
+          <h2 class="arc-contact-heading">Let's Build Your Vision.</h2>
+          <p class="arc-contact-sub">
+            Ready to start your next project? We'd love to hear from you. Guaranteed response within 2–4 hours.
+          </p>
+        </div>
+
+        <!-- Center Column: Floating Dark Form (Matching Screenshot) -->
+        <!-- <div class="arc-contact-form-wrap">
+          <form class="arc-contact-form" id="arcContactForm">
+            <div class="arc-form-row">
+              <input type="text" class="arc-input" id="contactName" placeholder="Your Name" required="">
+              <input type="email" class="arc-input" id="contactEmail" placeholder="Your Email" required="">
+            </div>
+            <div class="arc-form-row">
+              <textarea class="arc-textarea" id="contactMessage" placeholder="Tell us about your project..." rows="3"
+                required=""></textarea>
+            </div>
+            <div class="arc-form-submit">
+              <button type="submit" class="arc-btn-light">
+                <span>Send Message</span>
+                <span class="arc-btn-arrow">→</span>
+              </button>
+            </div>
+          </form>
+        </div> -->
+
+        <!-- Right Column: Direct Channels (Matching Screenshot) -->
+        <div class="arc-contact-direct">
+          <span class="arc-direct-kicker">OR REACH US DIRECTLY</span>
+          <div class="arc-direct-list">
+            <a href="https://wa.me/923235619375" target="_blank" rel="noopener noreferrer" class="arc-direct-item">
+              <span class="arc-direct-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </span>
+              <span class="arc-direct-val">+92 323 5619375</span>
+            </a>
+
+            <a href="mailto:touseefraza409@gmail.com" class="arc-direct-item">
+              <span class="arc-direct-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span class="arc-direct-val">touseefraza409@gmail.com</span>
+            </a>
+
+            <div class="arc-direct-item">
+              <span class="arc-direct-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span class="arc-direct-val">Lahore, PK • Worldwide Remote</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Atmospheric Accent Visual (Chair in stone niche) -->
+      <div class="arc-contact-ambient-frame">
+        <img src="contact_lounge.jpg" alt="Modern Minimalist Stone Architecture Lounge" class="arc-contact-ambient-img">
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="arc-footer-bottom">
+        <div class="arc-footer-left">
+          <span class="arc-footer-brand">TOUSEEF RAZA</span>
+          <span class="arc-footer-copy">© 2026 Touseef Raza. Architecture • Code • Speed. All rights reserved.</span>
+        </div>
+        <div class="arc-footer-right">
+          <a href="https://github.com/touseefr" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/touseefraza" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://wa.me/923235619375" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="#hero" class="arc-footer-top-btn">Back to Top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
   <script src="script.js"></script>
 </body>
 
