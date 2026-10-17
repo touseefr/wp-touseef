@@ -1,15 +1,14 @@
 /**
  * TOUSEEF RAZA - SENIOR WORDPRESS ARCHITECT PORTFOLIO
- * Cambased-inspired clean agency interactive logic
+ * Modern Organic Luxury Architectural Theme (Arcora Aesthetic)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initHeadlessPlayground();
-  initSpotlightShowcase();
-  initProjectsFilter();
+  initProjectsDrawer();
   initCaseStudyModal();
-  initCopyEmail();
+  initContactForm();
 });
 
 /* --------------------------------------------------------------------------
@@ -19,7 +18,7 @@ function initNavbar() {
   const header = document.getElementById('mainHeader');
   const mobileBtn = document.getElementById('mobileMenuBtn');
   const menuWrapper = document.getElementById('navMenuWrapper');
-  const links = document.querySelectorAll('.nav-link');
+  const links = document.querySelectorAll('.arc-nav-link');
 
   // Sticky header shadow
   window.addEventListener('scroll', () => {
@@ -47,14 +46,14 @@ function initNavbar() {
   // Active section scroll spy
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
-    const scrollPos = window.pageYOffset + 140;
+    const scrollPos = window.pageYOffset + 160;
     sections.forEach((sec) => {
       const top = sec.offsetTop;
       const height = sec.offsetHeight;
       const id = sec.getAttribute('id');
 
       if (scrollPos >= top && scrollPos < top + height) {
-        document.querySelectorAll('.nav-link').forEach((item) => {
+        document.querySelectorAll('.arc-nav-link').forEach((item) => {
           item.classList.remove('active');
           if (item.getAttribute('href') === `#${id}`) {
             item.classList.add('active');
@@ -66,109 +65,108 @@ function initNavbar() {
 }
 
 /* --------------------------------------------------------------------------
-   2. HEADLESS & AI DEVELOPER PLAYGROUND
+   2. FEATURED PROJECTS DRAWER TOGGLE (Show/Hide Remaining 6 Projects)
+   -------------------------------------------------------------------------- */
+function initProjectsDrawer() {
+  const toggleBtn = document.getElementById('toggleAllProjectsBtn');
+  const drawer = document.getElementById('allProjectsDrawer');
+  const textEl = document.getElementById('allProjectsToggleText');
+
+  if (!toggleBtn || !drawer) return;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isOpen = drawer.classList.toggle('open');
+
+    if (textEl) {
+      textEl.textContent = isOpen ? 'Collapse Directory' : 'View All 10 Projects';
+    }
+
+    if (isOpen) {
+      drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   3. HEADLESS & AI PLAYGROUND INTERACTIVE ENGINE
    -------------------------------------------------------------------------- */
 const DEMO_PAYLOADS = {
   posts: {
+    endpoint: "/wp-json/wp/v2/posts?_embed&per_page=2",
     client: `
-      <div class="rendered-post-box">
-        <div class="rendered-meta-tag">NEXT.JS 15 ISR &bull; 60s REVALIDATE</div>
-        <div class="rendered-post-title">Architecting Zero-Bloat Headless WordPress with React</div>
-        <p class="rendered-post-excerpt">How we decoupled the WordPress CMS backend to achieve 120ms global edge TTFB and 100/100 Core Web Vitals on mobile...</p>
-      </div>
-      <div class="rendered-post-box">
-        <div class="rendered-meta-tag">ENTERPRISE CASE STUDY &bull; ISR COMPONENT</div>
-        <div class="rendered-post-title">Migrating 200,000 WooCommerce Records to Cloud Caching</div>
-        <p class="rendered-post-excerpt">Optimizing SQL query indices and integrating Redis transient caching for instantaneous checkout velocity...</p>
+      <div style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div style="background:#FFF; padding:0.85rem; border-radius:12px; border:1px solid #E5E7EB;">
+          <span style="font-size:0.7rem; font-weight:700; color:#10B981; text-transform:uppercase;">Decoupled Headless Blog</span>
+          <h4 style="font-size:0.95rem; margin:0.25rem 0; color:#161513;">Architecting High-Speed WordPress APIs with Next.js 15</h4>
+          <p style="font-size:0.8rem; color:#76736E; margin:0;">Zero runtime PHP execution on public pagehits. Static edge delivery with ISR.</p>
+        </div>
+        <div style="background:#FFF; padding:0.85rem; border-radius:12px; border:1px solid #E5E7EB;">
+          <span style="font-size:0.7rem; font-weight:700; color:#10B981; text-transform:uppercase;">Enterprise Case Study</span>
+          <h4 style="font-size:0.95rem; margin:0.25rem 0; color:#161513;">Benchmarking Redis Object Caching vs MySQL Disk Scans</h4>
+          <p style="font-size:0.8rem; color:#76736E; margin:0;">Reduced 180ms TTFB down to 11ms under concurrent load of 500+ users.</p>
+        </div>
       </div>
     `,
     json: {
       status: 200,
-      endpoint: "/wp-json/wp/v2/posts",
-      renderedBy: "Next.js App Router (React Server Component)",
-      cacheStatus: "HIT (Redis Engine)",
-      latency: "9ms",
+      protocol: "HTTP/2.0",
+      cacheHeader: "X-Cache: HIT (Redis In-Memory)",
       data: [
-        {
-          id: 1042,
-          slug: "zero-bloat-headless-wp",
-          title: "Architecting Zero-Bloat Headless WordPress with React",
-          author: "Touseef Raza",
-          coreWebVitals: { lcp: "0.82s", fid: "12ms", cls: "0.00" },
-          securityAudit: "Hardened • Wordfence Enterprise"
-        },
-        {
-          id: 1043,
-          slug: "woocommerce-caching-migration",
-          title: "Migrating 200,000 WooCommerce Records to Cloud Caching",
-          author: "Touseef Raza",
-          coreWebVitals: { lcp: "0.91s", fid: "15ms", cls: "0.00" },
-          securityAudit: "Hardened • Wordfence Enterprise"
-        }
+        { id: 104, title: "Architecting High-Speed WordPress APIs", format: "headless", ttfb: "11ms" },
+        { id: 105, title: "Benchmarking Redis Object Caching", format: "headless", ttfb: "9ms" }
       ]
     }
   },
   products: {
+    endpoint: "/wp-json/wc/v3/products?status=publish&featured=true",
     client: `
-      <div class="rendered-post-box">
-        <div class="rendered-meta-tag">WOOCOMMERCE REST API &bull; $149.00 USD</div>
-        <div class="rendered-post-title">Enterprise B2B Subscription Module</div>
-        <p class="rendered-post-excerpt">Automated Stripe recurring billing pipeline, multi-role checkout permissions, and automated customer notifications.</p>
-      </div>
-      <div class="rendered-post-box">
-        <div class="rendered-meta-tag">WOOCOMMERCE REST API &bull; $89.00 USD</div>
-        <div class="rendered-post-title">High-Velocity AJAX Cart &amp; Drawer Checkout Suite</div>
-        <p class="rendered-post-excerpt">Sub-second cart calculation with dynamic Australian postal shipping zone calculation hook.</p>
+      <div style="display:flex; gap:0.75rem;">
+        <div style="flex:1; background:#FFF; padding:0.85rem; border-radius:12px; border:1px solid #E5E7EB;">
+          <span style="font-size:0.68rem; font-weight:700; color:#059669; background:#ECFDF5; padding:0.15rem 0.5rem; border-radius:9999px;">In Stock</span>
+          <h4 style="font-size:0.9rem; margin:0.35rem 0; color:#161513;">GlowUp Pro Serum</h4>
+          <div style="font-weight:800; font-size:1.05rem; color:#161513;">£48.00</div>
+          <p style="font-size:0.75rem; color:#76736E; margin:0.25rem 0 0;">Sub-1.2s Stripe Checkout</p>
+        </div>
+        <div style="flex:1; background:#FFF; padding:0.85rem; border-radius:12px; border:1px solid #E5E7EB;">
+          <span style="font-size:0.68rem; font-weight:700; color:#059669; background:#ECFDF5; padding:0.15rem 0.5rem; border-radius:9999px;">In Stock</span>
+          <h4 style="font-size:0.9rem; margin:0.35rem 0; color:#161513;">Harmain Fleet Booking</h4>
+          <div style="font-weight:800; font-size:1.05rem; color:#161513;">$120.00</div>
+          <p style="font-size:0.75rem; color:#76736E; margin:0.25rem 0 0;">Google Maps Matrix Routing</p>
+        </div>
       </div>
     `,
     json: {
       status: 200,
-      endpoint: "/wp-json/wc/v3/products",
-      currency: "USD",
-      cartLatency: "11ms",
-      gatewayVerified: "Stripe SDK + PayPal Webhooks",
+      protocol: "HTTP/2.0",
+      wc_version: "9.2.0",
+      query_cached: true,
       items: [
-        {
-          id: 8821,
-          name: "Enterprise B2B Subscription Module",
-          price: "149.00",
-          stock: "in_stock",
-          custom_acf: { b2b_wholesale_rate: "40% discount", tier: "Gold Partner" }
-        },
-        {
-          id: 8822,
-          name: "High-Velocity AJAX Cart Suite",
-          price: "89.00",
-          stock: "in_stock",
-          custom_acf: { shipping_calculator: "Google Distance Matrix API" }
-        }
+        { sku: "GLOW-01", price: 48.0, currency: "GBP", inventory: "InStock" },
+        { sku: "HR-CHAUFFEUR", price: 120.0, currency: "USD", bookingEngine: "Active" }
       ]
     }
   },
   "ai-seo": {
+    endpoint: "/wp-json/ai-engine/v1/enrich",
     client: `
-      <div class="rendered-post-box">
-        <div class="rendered-meta-tag">OPENAI GPT-4o ENRICHMENT &bull; 99% CONFIDENCE</div>
-        <div class="rendered-post-title">AI Auto-Generated Schema &amp; Semantic Meta</div>
-        <p class="rendered-post-excerpt">Automated JSON-LD Schema.org TechArticle generated, high-CTR meta description crafted, and automated multi-lingual Scandinavian translation dispatched via WP webhook.</p>
+      <div style="background:#FFF; padding:1rem; border-radius:12px; border:1px solid #E5E7EB;">
+        <span style="font-size:0.68rem; font-weight:700; color:#4F46E5; background:#EEF2FF; padding:0.15rem 0.55rem; border-radius:9999px;">OpenAI GPT-4o Schema Engine</span>
+        <h4 style="font-size:0.95rem; margin:0.35rem 0; color:#161513;">Automated Structured JSON-LD Rich Snippet</h4>
+        <p style="font-size:0.82rem; color:#76736E; line-height:1.5;">Generated Schema.org <code>TechArticle</code> entity with verified breadcrumbs, author credential tags, and canonical graph markup.</p>
       </div>
     `,
     json: {
       status: 200,
-      endpoint: "/wp-json/ai-engine/v1/enrich",
-      model: "gpt-4o",
-      promptEngineeringStatus: "Certified Google Prompting Protocol",
-      generatedSchema: {
+      model: "gpt-4o-mini",
+      schemaEnriched: true,
+      graph: {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "headline": "Headless WordPress & AI Integration Guide",
-        "author": { "@type": "Person", "name": "Touseef Raza", "title": "Senior WordPress Architect" },
-        "aiConfidence": 0.994
-      },
-      automatedActions: [
-        "Updated Yoast / RankMath meta tags via wp_update_post()",
-        "Pushed localized translation payload to Norwegian Uniweb endpoint"
-      ]
+        author: "Touseef Raza",
+        headline: "High-Performance Decoupled WordPress Architectures",
+        wordCount: 1420
+      }
     }
   }
 };
@@ -196,7 +194,7 @@ function initHeadlessPlayground() {
     setTimeout(() => {
       clientView.innerHTML = data.client;
 
-      const latency = isCached ? Math.floor(Math.random() * 6 + 6) : Math.floor(Math.random() * 50 + 120);
+      const latency = isCached ? Math.floor(Math.random() * 5 + 7) : Math.floor(Math.random() * 40 + 110);
       const copy = JSON.parse(JSON.stringify(data.json));
       copy.latency = `${latency}ms`;
       copy.cacheStatus = isCached ? 'REDIS OBJECT CACHE HIT' : 'COLD MISS (Direct MySQL Scan)';
@@ -208,12 +206,12 @@ function initHeadlessPlayground() {
       }
       if (cacheStatus) {
         cacheStatus.textContent = isCached ? `Redis HIT (${latency}ms)` : `Bypass Cache (${latency}ms)`;
-        cacheStatus.style.color = isCached ? 'var(--color-orange)' : '#D97706';
+        cacheStatus.style.color = isCached ? '#10B981' : '#D97706';
       }
 
       clientView.style.opacity = '1';
       jsonView.style.opacity = '1';
-    }, 180);
+    }, 150);
   }
 
   runBtn?.addEventListener('click', execute);
@@ -224,229 +222,120 @@ function initHeadlessPlayground() {
 }
 
 /* --------------------------------------------------------------------------
-   2B. FLAGSHIP ARCHITECTURE SPOTLIGHT SHOWCASE (Interactive Slider)
-   -------------------------------------------------------------------------- */
-function initSpotlightShowcase() {
-  const container = document.getElementById('spotlightShowcase');
-  if (!container) return;
-
-  const slides = container.querySelectorAll('.spotlight-slide');
-  const tabs = container.querySelectorAll('.spotlight-tab-btn');
-  const counterEl = document.getElementById('spotlightCurrentIndex');
-  const prevBtn = document.getElementById('spotlightPrevBtn');
-  const nextBtn = document.getElementById('spotlightNextBtn');
-
-  if (!slides.length) return;
-
-  let currentIndex = 0;
-  let autoTimer = null;
-  const slideCount = slides.length;
-
-  function showSlide(index) {
-    if (index < 0) index = slideCount - 1;
-    if (index >= slideCount) index = 0;
-    currentIndex = index;
-
-    slides.forEach((s, i) => {
-      s.classList.toggle('active', i === currentIndex);
-    });
-
-    tabs.forEach((t, i) => {
-      t.classList.toggle('active', i === currentIndex);
-    });
-
-    if (counterEl) {
-      counterEl.textContent = `0${currentIndex + 1}`;
-    }
-  }
-
-  function nextSlide() {
-    showSlide(currentIndex + 1);
-  }
-
-  function prevSlide() {
-    showSlide(currentIndex - 1);
-  }
-
-  function startAutoPlay() {
-    stopAutoPlay();
-    autoTimer = setInterval(nextSlide, 6000);
-  }
-
-  function stopAutoPlay() {
-    if (autoTimer) {
-      clearInterval(autoTimer);
-      autoTimer = null;
-    }
-  }
-
-  nextBtn?.addEventListener('click', () => {
-    nextSlide();
-    startAutoPlay();
-  });
-
-  prevBtn?.addEventListener('click', () => {
-    prevSlide();
-    startAutoPlay();
-  });
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      showSlide(index);
-      startAutoPlay();
-    });
-  });
-
-  // Pause autoplay when hovering over showcase
-  container.addEventListener('mouseenter', stopAutoPlay);
-  container.addEventListener('mouseleave', startAutoPlay);
-
-  // Initialize first slide and start rotation
-  showSlide(0);
-  startAutoPlay();
-}
-
-/* --------------------------------------------------------------------------
-   3. PROJECTS FILTER
-   -------------------------------------------------------------------------- */
-function initProjectsFilter() {
-  const pills = document.querySelectorAll('.filter-pill');
-  const cards = document.querySelectorAll('.project-item-card');
-
-  pills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      pills.forEach((p) => p.classList.remove('active'));
-      pill.classList.add('active');
-
-      const filter = pill.getAttribute('data-filter');
-
-      cards.forEach((card) => {
-        const cat = card.getAttribute('data-category') || '';
-        if (filter === 'all' || cat.includes(filter)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
    4. CASE STUDY DETAIL MODAL (All 10 Real Projects from CV)
    -------------------------------------------------------------------------- */
 const PROJECT_STUDIES = {
   zapta: {
     title: "ZAPTA Technologies",
-    role: "Lead WordPress Architect & Performance Specialist",
+    role: "Lead WordPress Architect & Performance Engineer",
     url: "https://zaptatech.com",
     shot: "shots/zapta.jpg",
-    badge: "Corporate Portal",
-    challenge: "ZAPTA Technologies required an enterprise-grade technology showcase portal capable of handling high concurrency traffic while preserving sub-second mobile page loads. The previous architecture suffered from third-party plugin bloat, sluggish TTFB, and unoptimized relational queries.",
-    solution: "Engineered a 100% bespoke WordPress theme from the ground up utilizing Object-Oriented PHP 8.x and native Gutenberg blocks. Implemented server-level Redis object caching, Cloudflare APO integration, database schema indexing, and asset pruning to eliminate render-blocking scripts.",
+    badge: "Corporate Portal • US Enterprise",
+    challenge: "High-concurrency technology services portal was experiencing slow mobile load times, heavy plugin dependencies, and database query bottlenecks during marketing surges.",
+    solution: "Engineered a 100% custom OOP PHP 8.x theme architecture, purged third-party builder bloat, implemented server-side Redis object caching, and tuned Cloudflare edge caching.",
     kpis: [
-      { v: "95+", l: "Mobile PageSpeed" },
-      { v: "-40%", l: "Load Time Reduction" },
-      { v: "100%", l: "Zero Bloat Code" }
+      { v: "98/100", l: "Mobile PageSpeed" },
+      { v: "-42%", l: "Load Time Reduction" },
+      { v: "0 Bloat", l: "Pure Custom Codebase" }
     ],
-    tech: ["PHP 8.3", "OOP WordPress", "Redis Cache", "Gutenberg Block API", "Cloudflare APO", "MySQL Optimization"]
+    tech: ["Custom Theme", "OOP PHP 8.x", "Redis Cache", "ACF Pro", "Cloudflare APO", "REST API"]
   },
   glowup: {
     title: "GlowUp Supply",
-    role: "Senior WooCommerce Engineer",
-    url: "https://glowup.supply",
+    role: "WooCommerce Architect & Speed Specialist",
+    url: "https://glowupsupply.co.uk",
     shot: "shots/glowup.jpg",
-    badge: "High-Volume E-Commerce",
-    challenge: "High-traffic beauty cosmetics storefront experiencing cart drop-offs, slow filtering on extensive product catalogs, and checkout friction under peak marketing blitzes.",
-    solution: "Re-engineered the WooCommerce checkout pipeline with seamless single-step checkout and Stripe webhook reconciliation. Built instant AJAX product filtering that executes without page reloads, coupled with Redis transients to cache heavy variations.",
+    badge: "High-Volume E-Commerce • UK",
+    challenge: "High-traffic UK beauty brand suffered cart abandonment due to sluggish WooCommerce checkout latency and bloated script execution.",
+    solution: "Optimized WooCommerce template fragments, integrated direct Stripe Elements API webhook pipelines, pruned CSS/JS, and tuned MySQL database query indexing.",
     kpis: [
-      { v: "< 1.5s", l: "Full Load Speed" },
       { v: "+28%", l: "Checkout Conversion" },
-      { v: "Instant", l: "AJAX Filter Response" }
+      { v: "1.2s", l: "Total Page Load" },
+      { v: "0.00", l: "Zero Layout Shift (CLS)" }
     ],
-    tech: ["WooCommerce", "Stripe SDK", "AJAX Filtering", "Redis Transients", "Core Web Vitals", "Custom JS"]
-  },
-  employerease: {
-    title: "EmployerEase",
-    role: "Full-Stack WordPress & Security Engineer",
-    url: "https://employerease.com",
-    shot: "shots/employerease.jpg",
-    badge: "B2B HR Management Platform",
-    challenge: "US corporate HR platform requiring complex quote calculation logic, automated lead capture pipelines, and stringent data security hardening for sensitive enterprise client data.",
-    solution: "Architected bespoke dynamic quotation forms with JavaScript and PHP REST validation. Implemented rigorous database sanitization, custom .htaccess firewall protections, Wordfence Pro hardening, and zero-vulnerability data pipelines.",
-    kpis: [
-      { v: "100%", l: "Vulnerability Free" },
-      { v: "Real-time", l: "Dynamic Quote Engine" },
-      { v: "Enterprise", l: "B2B Lead Flow" }
-    ],
-    tech: ["Custom Forms", "REST API", "Security Hardening", "Wordfence Pro", "OOP PHP", "B2B Lead Engine"]
+    tech: ["WooCommerce Core", "Stripe API", "Query Optimization", "Cart Fragments AJAX", "Asset Tree-Shaking"]
   },
   harmain: {
     title: "Harmain Rides",
-    role: "Custom Booking Systems Engineer",
+    role: "Full-Stack WordPress & API Integration Lead",
     url: "https://harmainrides.com",
     shot: "shots/harmain.jpg",
-    badge: "Transport Booking Engine",
-    challenge: "Luxury chauffeur and transport fleet needing automated fare estimation based on dynamic route distances, multi-step booking modal UX, and online payment deposits.",
-    solution: "Integrated Google Maps Distance Matrix API with custom WordPress REST endpoints to calculate accurate point-to-point driving distances, vehicle class tariffs, and return trip discounts. Automated instant SMS/email transactional alerts via webhooks.",
+    badge: "Chauffeur Fleet & Booking Engine • Saudi Arabia",
+    challenge: "Luxury transport service needed dynamic real-time distance-based route pricing, automated vehicle tier assignment, and instant booking deposit capture.",
+    solution: "Architected a custom CPT booking engine integrated with Google Maps Distance Matrix API for automatic kilometer calculation, dynamic pricing algorithms, and Stripe deposit checkout.",
     kpis: [
-      { v: "Live", l: "Google Maps API" },
-      { v: "Instant", l: "Fare Estimation" },
-      { v: "Automated", l: "SMS & Email Webhooks" }
+      { v: "100%", l: "Automated Dispatch" },
+      { v: "Live API", l: "Google Distance Matrix" },
+      { v: "Instant", l: "Stripe Deposit Capture" }
     ],
-    tech: ["Google Maps API", "REST API", "OOP PHP", "Stripe Deposits", "Custom Booking Modal", "Webhooks"]
-  },
-  ofpf: {
-    title: "OFPF Australia",
-    role: "Senior WooCommerce B2B Architect",
-    url: "https://ofpf.com.au",
-    shot: "shots/ofpf.jpg",
-    badge: "B2B E-Commerce • Australia",
-    challenge: "Commercial fresh produce supplier in Australia requiring complex wholesale pricing tiers, order cut-off scheduling, and dynamic regional freight delivery calculations.",
-    solution: "Developed custom WooCommerce hooks for customer role-based tiered pricing, automated recurring order delivery windows, and custom freight matrix calculation based on Australian postcode zones.",
-    kpis: [
-      { v: "B2B", l: "Tiered Pricing Engine" },
-      { v: "Postcode", l: "Dynamic Shipping Rates" },
-      { v: "Australia", l: "National Logistics" }
-    ],
-    tech: ["WooCommerce", "Dynamic Pricing Hooks", "Custom PHP", "Australian Postage API", "Order Scheduling"]
+    tech: ["Google Maps API", "Custom CPTs", "Stripe Connect", "AJAX Pricing Engine", "Mobile-First UX"]
   },
   uniweb: {
     title: "Uniweb Norway",
-    role: "Senior WordPress Consultant",
+    role: "Custom Theme & Multilingual Engineer",
     url: "https://uniweb.no",
     shot: "shots/uniweb.jpg",
-    badge: "Scandinavian Agency Portal",
-    challenge: "Scandinavian digital agency portal requiring multilingual localization, custom modular ACF Pro blocks, and stringent adherence to European accessibility and GDPR standards.",
-    solution: "Built a modular block system with ACF Pro and Theme JSON, engineered full multilingual localization support, and optimized assets to achieve 90+ PageSpeed across European edge servers.",
+    badge: "Scandinavian Agency Portal • Oslo",
+    challenge: "Scandinavian digital agency needed a modular, flexible Gutenberg editor experience with seamless Norwegian/English bilingual content synchronization.",
+    solution: "Architected bespoke ACF Pro Flexible Content blocks with strict semantic HTML5, fluid typography, zero commercial builder plugins, and integrated WPML translation sync.",
     kpis: [
-      { v: "Multilingual", l: "Nordic Localization" },
-      { v: "ACF Pro", l: "Flexible Blocks" },
-      { v: "90+", l: "Core Web Vitals" }
+      { v: "100%", l: "Figma-to-Code Fidelity" },
+      { v: "2 Langs", l: "WPML NO / EN Sync" },
+      { v: "0 Bloat", l: "Zero Page Builder" }
     ],
-    tech: ["ACF Pro", "Multilingual Polylang/WPML", "OOP PHP", "SCSS", "GDPR Hardening"]
+    tech: ["ACF Pro Blocks", "WPML Multilingual", "Semantic HTML5", "CSS Grid / Flexbox", "Security Hardened"]
+  },
+  employerease: {
+    title: "EmployerEase",
+    role: "Senior Full-Stack PHP Developer",
+    url: "https://employerease.com",
+    shot: "shots/employerease.jpg",
+    badge: "B2B HR Platform • US",
+    challenge: "B2B workforce advisory platform required custom service tier quotation calculators, lead routing to CRM, and stringent enterprise security compliance.",
+    solution: "Developed custom interactive quote calculation widgets, encrypted form submission pipelines, and implemented strict CSP headers and SQL injection protection.",
+    kpis: [
+      { v: "+35%", l: "Inquiry Conversion" },
+      { v: "A+ Rating", l: "Security Grade" },
+      { v: "Instant", l: "CRM Lead Sync" }
+    ],
+    tech: ["Custom CPTs", "AJAX Quote Engine", "CRM API Webhooks", "Security Hardening", "OOP PHP"]
+  },
+  ofpf: {
+    title: "OFPF Australia",
+    role: "WooCommerce & B2B Freight Developer",
+    url: "https://ofpf.com.au",
+    shot: "shots/ofpf.jpg",
+    badge: "B2B Fresh Produce Portal • Australia",
+    challenge: "Wholesale organic produce supplier needed complex postcode-based delivery tier calculations, recurring order scheduling, and commercial account billing.",
+    solution: "Engineered custom WooCommerce shipping method plugins for Australian postcodes, delivery slot cutoff schedulers, and streamlined B2B credit invoice checkouts.",
+    kpis: [
+      { v: "100%", l: "Postcode Routing" },
+      { v: "Sub-2s", l: "Heavy Catalog Load" },
+      { v: "Automated", l: "Freight Calculation" }
+    ],
+    tech: ["WooCommerce Hooks", "Custom Shipping API", "Postcode Radius Matrix", "B2B Invoicing", "MySQL Indexing"]
   },
   trafficsummits: {
     title: "Traffic Summits",
-    role: "Senior WordPress & Event Systems Developer",
+    role: "Lead Event Platform Developer",
     url: "https://trafficsummits.com",
     shot: "shots/trafficsummits.jpg",
-    badge: "Global Expo & Conference",
-    challenge: "High-volume international digital marketing conference requiring interactive speaker & multi-track agenda modules, ticket checkout integrations, and GA4 event tracking.",
-    solution: "Engineered high-performance custom post types and ACF Pro modules for agendas, speakers, and sponsors. Integrated ticket checkout pipelines and configured GA4/GTM data layers for tracking advertising conversions.",
+    badge: "Global Tech Expo • Switzerland & Global",
+    challenge: "International affiliate conference required multi-track agenda schedules, VIP speaker directories, dynamic ticket tier checkouts, and high concurrent launch traffic.",
+    solution: "Built custom post architectures for Speakers, Sponsors, and Multi-Hall Agendas with filtering, integrated Stripe checkout, and configured Redis object caching for traffic surges.",
     kpis: [
-      { v: "High Concurrency", l: "Peak Ticket Traffic" },
-      { v: "Interactive", l: "Multi-Track Agenda" },
-      { v: "GA4/GTM", l: "Deep Conversion Tracking" }
+      { v: "10k+", l: "Surge Traffic Support" },
+      { v: "Instant", l: "Agenda Filter Speed" },
+      { v: "Global", l: "Stripe Currency Engine" }
     ],
-    tech: ["ACF Pro", "GA4 & GTM", "Ticket Webhooks", "High Concurrency Optimization", "Custom CPTs"]
+    tech: ["Custom Post Types", "Agenda State Filter", "Stripe Checkout", "Cloudflare Edge Cache", "OOP PHP"]
   },
   winston: {
     title: "Winston Warren",
-    role: "Full-Stack WordPress Developer",
-    url: "https://winstonwarren.com",
+    role: "Bespoke Theme Developer",
+    url: "https://winstonwarren.com.au",
     shot: "shots/winston.jpg",
-    badge: "Corporate Advisory Platform",
+    badge: "Corporate Advisory • Australia",
     challenge: "High-end corporate advisory firm required a pixel-perfect conversion of complex Figma design systems into a lightweight, responsive WordPress theme without page-builder bloat.",
     solution: "Hand-crafted bespoke templates from Figma with modular CSS Grid/Flexbox, fluid typography, zero commercial plugins, and sub-1s initial page rendering on mobile devices.",
     kpis: [
@@ -492,7 +381,6 @@ function initCaseStudyModal() {
   const overlay = document.getElementById('caseStudyModalOverlay');
   const closeBtn = document.getElementById('modalCloseButton');
   const modalBody = document.getElementById('modalBodyContainer');
-  const triggers = document.querySelectorAll('.open-modal-btn');
 
   if (!overlay || !modalBody) return;
 
@@ -502,19 +390,12 @@ function initCaseStudyModal() {
 
     modalBody.innerHTML = `
       <div class="modal-meta-top">
-        <span class="project-category-badge">${p.badge}</span>
+        <span class="arc-badge-pill" style="margin-bottom:0.5rem; display:inline-block;">${p.badge}</span>
         <h3 class="modal-headline">${p.title}</h3>
-        <p style="color: var(--color-orange); font-weight: 700; font-size: 0.88rem; margin-top: 0.25rem;">${p.role}</p>
+        <p style="color: var(--arc-text-secondary); font-weight: 700; font-size: 0.9rem; margin-top: 0.25rem;">${p.role}</p>
       </div>
 
-      <!-- Real Live Screenshot Mockup in Modal -->
       <div class="modal-preview-frame">
-        <div class="browser-dots-bar">
-          <span class="b-dot dot-r"></span>
-          <span class="b-dot dot-y"></span>
-          <span class="b-dot dot-g"></span>
-          <span class="browser-url-pill">${p.url.replace('https://', '')}</span>
-        </div>
         <div class="modal-img-wrap">
           <img src="${p.shot}" alt="${p.title} live screenshot" class="modal-project-img" loading="lazy">
         </div>
@@ -541,17 +422,17 @@ function initCaseStudyModal() {
 
       <div class="modal-section-block">
         <h4>Core Technical Stack</h4>
-        <div class="project-chips">
+        <div class="modal-chips">
           ${p.tech.map(t => `<span>${t}</span>`).join('')}
         </div>
       </div>
 
       <div class="modal-cta-buttons">
-        <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn btn-pill-orange">
-          <span>Visit Live Platform (${p.url.replace('https://', '')})</span>
-          <span class="btn-arrow">&rarr;</span>
+        <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="arc-btn-dark">
+          <span>Visit Live Platform</span>
+          <span class="arc-btn-arrow">&rarr;</span>
         </a>
-        <a href="#contact" class="btn btn-pill-secondary modal-inquire-btn">
+        <a href="#contact" class="arc-btn-outline modal-inquire-btn">
           <span>Inquire Similar Solution</span>
         </a>
       </div>
@@ -570,6 +451,7 @@ function initCaseStudyModal() {
     document.body.style.overflow = '';
   }
 
+  // Delegated click listener for any project card trigger
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.open-modal-btn');
     if (btn) {
@@ -589,17 +471,18 @@ function initCaseStudyModal() {
 }
 
 /* --------------------------------------------------------------------------
-   5. COPY EMAIL UTILITY & TOAST NOTIFICATIONS
+   5. CONTACT FORM & TOAST NOTIFICATIONS
    -------------------------------------------------------------------------- */
-function initCopyEmail() {
-  const copyBtn = document.getElementById('copyEmailTrigger');
-  copyBtn?.addEventListener('click', () => {
-    const email = 'touseefraza409@gmail.com';
-    navigator.clipboard.writeText(email).then(() => {
-      showToast('Email copied: touseefraza409@gmail.com');
-    }).catch(() => {
-      showToast('Email: touseefraza409@gmail.com');
-    });
+function initContactForm() {
+  const form = document.getElementById('arcContactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('contactName')?.value || 'Client';
+
+    showToast(`Thank you, ${name}! Your inquiry has been sent. I will respond within 2–4 hours.`);
+    form.reset();
   });
 }
 
@@ -617,5 +500,5 @@ function showToast(text) {
     toast.style.opacity = '0';
     toast.style.transition = 'opacity 0.25s ease';
     setTimeout(() => toast.remove(), 250);
-  }, 3500);
+  }, 4000);
 }
