@@ -842,6 +842,79 @@ a {
   text-underline-offset: 6px;
 }
 
+/* --------------------------------------------------------------------------
+   JITTER NEGATIVE MASK EFFECT (Circle Lens Focus: "solvers.")
+   Exact reference match: https://jitter.video/template/design-negative-mask-effect/
+   Features a black circle gliding horizontally across the word, dynamically
+   inverting typography to the background color as shown in Jitter template frames.
+   -------------------------------------------------------------------------- */
+.about-left-copy .jitter-circle-focus {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.about-left-copy .jitter-circle-focus .circle-base-text {
+  color: #111827;
+  display: inline-block;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  user-select: none;
+}
+
+.about-left-copy .jitter-circle-focus .circle-mask-layer {
+  position: absolute;
+  inset: -0.55em -0.65em;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.35));
+  will-change: clip-path;
+  animation: jitterCircleSweep 3.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.about-left-copy .jitter-circle-focus .circle-overlay-fill {
+  position: absolute;
+  inset: 0;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  padding: 0.55em 0.65em;
+  box-sizing: border-box;
+}
+
+.about-left-copy .jitter-circle-focus .circle-inverted-text {
+  color: #FF5A1F;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  white-space: nowrap;
+  user-select: none;
+}
+
+@keyframes jitterCircleSweep {
+  0%, 8% {
+    clip-path: circle(0.72em at 1.05em 50%);
+  }
+  46%, 54% {
+    clip-path: circle(0.72em at calc(100% - 1.05em) 50%);
+  }
+  92%, 100% {
+    clip-path: circle(0.72em at 1.05em 50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-left-copy .jitter-circle-focus .circle-mask-layer {
+    animation: none;
+    clip-path: circle(0.72em at 50% 50%);
+  }
+}
+
 .about-p {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -2214,6 +2287,14 @@ a {
 
   .mobile-menu-btn {
     display: flex;
+  }
+
+  .hero-headline {
+    font-size: clamp(2rem, 7.5vw, 2.75rem);
+  }
+
+  .about-left-copy .jitter-circle-focus {
+    font-size: inherit;
   }
 
   .hero-highlights-grid {
