@@ -2027,6 +2027,77 @@ a {
   letter-spacing: -0.03em;
 }
 
+/* --------------------------------------------------------------------------
+   CASCADING TEXT EFFECT (Jitter Style)
+   Applied strictly to 'Let\'s Build Your Vision.' in Footer Section
+   -------------------------------------------------------------------------- */
+.cascading-text {
+  display: block;
+}
+
+.cascading-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.cascading-char-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.16em;
+  margin-bottom: -0.16em;
+  padding-top: 0.12em;
+  margin-top: -0.12em;
+  line-height: 1.1;
+}
+
+.cascading-char {
+  display: inline-block;
+  will-change: transform, opacity;
+  transform: translateY(0);
+  animation: jitterCascadeReveal 5s infinite both;
+  animation-delay: calc(var(--char-idx, 0) * 0.045s);
+}
+
+.arc-contact-heading:hover .cascading-char {
+  animation-play-state: paused;
+}
+
+@keyframes jitterCascadeReveal {
+  0%, 2% {
+    transform: translateY(120%);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  6% {
+    opacity: 1;
+  }
+  18%, 68% {
+    transform: translateY(0%);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  78% {
+    opacity: 1;
+  }
+  82% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  82.1%, 100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cascading-char {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
 .arc-contact-sub {
   font-size: 0.96rem;
   line-height: 1.65;
