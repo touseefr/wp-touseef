@@ -342,6 +342,36 @@ const PROJECT_STUDIES = {
     ],
     tech: ["ACF Pro", "Multilingual Polylang/WPML", "OOP PHP", "SCSS", "GDPR Hardening"]
   },
+  allflags: {
+    title: "All Flags & Signs",
+    role: "Senior WordPress & WooCommerce Architect",
+    url: "https://www.allflags.com.au/",
+    shot: "shots/allflags.jpg",
+    badge: "B2B E-Commerce & Signage Manufacturing • Australia",
+    challenge: "Western Australia's premier grand-format signage & flag producer required a modern e-commerce overhaul with real-time custom product dimension calculators, bulk pricing tiers, and automated quote generation.",
+    solution: "Engineered a high-performance WooCommerce solution featuring bespoke JavaScript dimension calculators, custom post type product catalogs, dynamic Australian GST/freight logic, and sub-1.2s page load speeds.",
+    kpis: [
+      { v: "B2B Engine", l: "Custom Dimensions & Quotes" },
+      { v: "WooCommerce", l: "Tiered Pricing Matrix" },
+      { v: "Australia", l: "National Manufacturing" }
+    ],
+    tech: ["WooCommerce", "Bespoke PHP 8", "Custom Product Calculator", "REST API", "Speed Optimization"]
+  },
+  cmtfitness: {
+    title: "CMT Fitness",
+    role: "Full-Stack WordPress Architect",
+    url: "https://cmtfitness.com/",
+    shot: "shots/cmtfitness.jpg",
+    badge: "International Fitness & Coaching Platform • Dubai / Miami",
+    challenge: "High-end international fitness & performance coaching brand serving executive clients in Dubai and Miami requiring a sleek, high-conversion membership platform, multi-region onboarding, and automated booking scheduling.",
+    solution: "Developed a zero-bloat custom WordPress theme with multi-region location selection, streamlined client qualification intake funnels, seamless Calendly/booking integrations, and ultra-crisp responsive mobile typography.",
+    kpis: [
+      { v: "Multi-Region", l: "Dubai & Miami Funnel" },
+      { v: "Automated", l: "Client Booking Intake" },
+      { v: "Sub-1s", l: "Edge Cache Rendering" }
+    ],
+    tech: ["Custom WordPress Theme", "Booking Integration", "Multi-Location UX", "Modern SCSS", "Performance Hardening"]
+  },
   trafficsummits: {
     title: "Traffic Summits",
     role: "Senior WordPress & Event Systems Developer",
